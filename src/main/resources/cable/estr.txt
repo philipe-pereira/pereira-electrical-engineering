@@ -1,0 +1,169 @@
+// SELECT `NOM_ESTRUTURA`, `NOM_NATUREZA_ESTRUTURA` FROM `testrutura` INNER JOIN `tnatureza_estrutura` ON `testrutura`.`COD_NATUREZA_ESTRUTURA`=`tnatureza_estrutura`.`COD_NATUREZA_ESTRUTURA` WHERE 1 ORDER BY `testrutura`.`NOM_ESTRUTURA` ASC
+2TS5	Madeira
+2TS7	Madeira
+A MAD	Madeira
+A MET	Metálica
+A1	Metálica
+A13	Metálica
+A1concreto	Concreto
+A2	Metálica
+A62	Metálica
+AS1	Metálica
+AX2	Metálica
+AX3	Metálica
+AX4	Metálica
+B	Metálica
+B6	Metálica
+BS1	Metálica
+BV	Metálica
+BX1	Metálica
+C	Concreto
+C6	Metálica
+CAI3	Concreto
+Cara de Gato	Metálica
+Cara de Gato Delta Invertido	Metálica
+CCS1	Madeira
+CITP1	Metálica
+CRS1	Concreto
+CSA1	Concreto
+CSLP	Concreto
+CX1-S	Metálica
+DA1	Metálica
+DA3	Metálica
+DA4A	Metálica
+DAA	Metálica
+DASA	Concreto
+DG1	Metálica
+DG1A	Metálica
+DG2	Metálica
+DG2A	Metálica
+DG3A	Metálica
+DG3A_FINAL	Metálica
+DL1	Metálica
+DL1A	Metálica
+DL2A	Metálica
+DL3	Metálica
+DL3A	Metálica
+DSA	Metálica
+DX1-S	Metálica
+E (LD 30408)	Metálica
+ET11	Madeira
+ET13	Madeira
+ETA11	Madeira
+ETA9	Madeira
+EX1	Metálica
+F	Metálica
+FA	Metálica
+FB	Metálica
+FC	Metálica
+G1	Metálica
+G1A	Metálica
+G2	Metálica
+H1L2A	Metálica
+H3L4A	Metálica
+H6L7	Metálica
+HS	Madeira
+HS7	Madeira
+HSR7	Madeira
+HSR9	Madeira
+HT	Madeira
+HT7	Madeira
+IBTP2	Metálica
+ITAN	Madeira
+J	Metálica
+K1	Metálica
+L10S	Metálica
+L1A	Metálica
+L3	Metálica
+L3A	Metálica
+L3A_2P	Metálica
+L5A	Metálica
+L6	Metálica
+L7A	Metálica
+L8S	Metálica
+L9T	Metálica
+LTP2	Metálica
+LX	Metálica
+LY	Metálica
+M1V1	Metálica
+M1V2	Metálica
+M2V1	Metálica
+M2V2	Metálica
+MI2	Madeira
+MMP	Madeira
+MX	Metálica
+MY	Metálica
+N	Metálica
+NG	Metálica
+NN	Metálica
+P	Metálica
+Pórtico 138kV	Metálica
+PP	Metálica
+R	Metálica
+R (LD 30836)	Metálica
+R (linha 30452)	Metálica
+R Modificada	Metálica
+R1	Metálica
+R2	Metálica
+R3	Metálica
+RA2T	Metálica
+RR	Metálica
+RTP1	Metálica
+RTP2	Metálica
+S	Metálica
+S (LD 30698)	Metálica
+S - concreto	Concreto
+S CIRCUITO DUPLO	Metálica
+S Modificada	Metálica
+S1	Metálica
+S10	Metálica
+S11	Metálica
+S13	Metálica
+S2	Metálica
+S23	Metálica
+S3	Metálica
+S4	Metálica
+S42	Metálica
+S5	Metálica
+S6	Metálica
+SA 138kV	Metálica
+SA 500kV	Metálica
+SC	Concreto
+SDT	Concreto
+SS	Metálica
+ST	Concreto
+STA2	Metálica
+Subterraneo	Concreto
+Subterraneo2	Concreto
+SX	Metálica
+SY	Metálica
+T (500 kV)	Metálica
+T1	Metálica
+T11	Metálica
+T15	Metálica
+T2	Metálica
+T25	Metálica
+T3	Metálica
+T4	Metálica
+T41	Metálica
+T43	Metálica
+T4R	Metálica
+T6	Metálica
+T7	Metálica
+T7R	Metálica
+T8	Metálica
+TA	Metálica
+TE	Metálica
+Torre Suspensa	Metálica
+TP3	Metálica
+TS12	Metálica
+TS24	Metálica
+TS42	Metálica
+TSNS	Madeira
+TSS	Concreto
+TSS(madeira)	Madeira
+TT	Metálica
+V1M1	Metálica
+VS	Concreto
+VSBE3	Metálica
+XX	Metálica
