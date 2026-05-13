@@ -168,6 +168,7 @@ public class Enr {
 
 	// -----------------------------------------------
 
+// TODO exclusivo da Cemig
 	public static String getSQL(int nreg, Enr[] enrs) {
 		int tv = 0, ti = 0, tn = 0;
 		float vi = 0f, vo = 0f;

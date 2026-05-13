@@ -14,10 +14,10 @@ import java.util.Map.Entry;
 
 import javax.swing.JPanel;
 
-import br.com.pereiraeng.math.Multiplicador;
-import br.com.pereiraeng.math.Vec;
 import br.com.pereiraeng.core.collections.MapUtils;
 import br.com.pereiraeng.electricalcircuit.solving.CircuitCalc;
+import br.com.pereiraeng.math.Multiplicador;
+import br.com.pereiraeng.math.Vec;
 
 /**
  * Classe que agrupa métodos que permitem traçar a curva de capabilidade de um

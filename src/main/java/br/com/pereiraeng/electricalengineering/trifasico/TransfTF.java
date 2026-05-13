@@ -1,8 +1,8 @@
 package br.com.pereiraeng.electricalengineering.trifasico;
 
+import br.com.pereiraeng.core.ExtendedMath;
 import br.com.pereiraeng.math.Complex;
 import br.com.pereiraeng.math.Vec;
-import br.com.pereiraeng.core.ExtendedMath;
 
 /**
  * Classe que contem funções e objetos que auxiliam cálculos envolvendo
@@ -131,5 +131,19 @@ public class TransfTF {
 					{ new Complex(Math.cos(theta + ExtendedMath.PI_23), 0.),
 							new Complex(-Math.sin(theta + ExtendedMath.PI_23), 0.), new Complex(1., 0.) } };
 		}
+	}
+
+	/**
+	 * Função que retorna a matriz de transformação das correntes de fase em função
+	 * da defasagem introduzida por um transformador
+	 * 
+	 * @param def número de 1 a 12
+	 * @return matriz de transformação trifásica
+	 */
+	public static double[][] getDefasagem(int def) {
+		double d = 2. * Math.cos(def * ExtendedMath.PI_6) / 3.;
+		double dp = 2. * Math.cos((def + 4) * ExtendedMath.PI_6) / 3.;
+		double dm = 2. * Math.cos((def - 4) * ExtendedMath.PI_6) / 3.;
+		return new double[][] { { d, dp, dm }, { dm, d, dp }, { dp, dm, d } };
 	}
 }

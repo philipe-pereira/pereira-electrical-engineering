@@ -3,10 +3,10 @@ package br.com.pereiraeng.electricalengineering.powerquality;
 import java.util.Arrays;
 import java.util.Map.Entry;
 
-import br.com.pereiraeng.math.Complex;
-import br.com.pereiraeng.math.timeseries.SrT;
 import br.com.pereiraeng.core.ExtendedMath;
 import br.com.pereiraeng.core.collections.ArrayUtils;
+import br.com.pereiraeng.math.Complex;
+import br.com.pereiraeng.math.timeseries.SrT;
 
 public class QE {
 
