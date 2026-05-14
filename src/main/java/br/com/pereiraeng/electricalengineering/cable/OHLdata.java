@@ -1,6 +1,7 @@
 package br.com.pereiraeng.electricalengineering.cable;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -21,13 +22,13 @@ import br.com.pereiraeng.electricalengineering.cable.CableEnums.Secoes;
  */
 public class OHLdata {
 
-	private static final String COMM = "//";
+	private static final String COMMENTS = "//";
 
 	private static String[] ohlTypes;
 
 	public static String[] getOHLtypes() {
 		LinkedList<String> out = new LinkedList<>();
-		URL url = ClassLoader.getSystemResource("cable//ohl.txt");
+		URL url = ClassLoader.getSystemResource("cable" + File.separator + "ohl.txt");
 		try {
 			InputStream stream = url.openStream(); // TODO essa parte do codigo se repete muito
 			BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
@@ -45,7 +46,7 @@ public class OHLdata {
 	public static String[] getCables(String typeName) {
 		LinkedList<String> out = new LinkedList<>();
 		// quando se abre o programa via jar, o nome do arquivo fica case sensitive
-		URL url = ClassLoader.getSystemResource("cable//" + typeName.toLowerCase() + ".txt");
+		URL url = ClassLoader.getSystemResource("cable" + File.separator + typeName.toLowerCase() + ".txt");
 		try {
 			InputStream stream = url.openStream();
 			BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
@@ -76,7 +77,7 @@ public class OHLdata {
 
 		loopClasses: for (int t = 0; t < ohlTypes.length; t++) { // procurar entre todos os tipos de cabo
 			try {
-				URL url = ClassLoader.getSystemResource("cable//" + ohlTypes[t] + ".txt");
+				URL url = ClassLoader.getSystemResource("cable" + File.separator + ohlTypes[t] + ".txt");
 				InputStream stream = url.openStream();
 				BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
 				String str;
@@ -126,7 +127,7 @@ public class OHLdata {
 		}
 
 		try {
-			URL url = ClassLoader.getSystemResource("cable//" + ohlTypes[type] + ".txt");
+			URL url = ClassLoader.getSystemResource("cable" + File.separator + ohlTypes[type] + ".txt");
 			InputStream stream = url.openStream();
 			BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
 			String str;
@@ -215,7 +216,7 @@ public class OHLdata {
 		if (ohlTypes == null)
 			getOHLtypes();
 		// quando se abre o programa via jar, o nome do arquivo fica case sensitive
-		URL url = ClassLoader.getSystemResource("cable//" + ohlTypes[type] + ".txt");
+		URL url = ClassLoader.getSystemResource("cable" + File.separator + ohlTypes[type] + ".txt");
 		try {
 			InputStream stream = url.openStream();
 			InputStreamReader streamReader = new InputStreamReader(stream);
@@ -245,7 +246,7 @@ public class OHLdata {
 	 */
 	public static String[][] getEstruturas() {
 		// quando se abre o programa via jar, o nome do arquivo fica case sensitive
-		URL url = ClassLoader.getSystemResource("cable//estr.txt");
+		URL url = ClassLoader.getSystemResource("cable" + File.separator + "estr.txt");
 
 		LinkedList<String[]> out = new LinkedList<>();
 		try {
@@ -254,7 +255,7 @@ public class OHLdata {
 			BufferedReader reader = new BufferedReader(streamReader);
 			String str = null;
 			while ((str = reader.readLine()) != null)
-				if (!str.startsWith(COMM))
+				if (!str.startsWith(COMMENTS))
 					out.add(str.split("\t"));
 			reader.close();
 			stream.close();
@@ -283,14 +284,14 @@ public class OHLdata {
 	 *                </ol>
 	 */
 	public static void loadNix2z10(Map<String, float[]> nix2z10) {
-		URL url = ClassLoader.getSystemResource("cable//imp.txt");
+		URL url = ClassLoader.getSystemResource("cable" + File.separator + "imp.txt");
 		try {
 			InputStream stream = url.openStream();
 			InputStreamReader streamReader = new InputStreamReader(stream);
 			BufferedReader reader = new BufferedReader(streamReader);
 			String str = null;
 			while ((str = reader.readLine()) != null) {
-				if (!str.startsWith(COMM)) {
+				if (!str.startsWith(COMMENTS)) {
 					String[] ss = str.split("\t");
 					nix2z10.put(ss[0], new float[] { Float.parseFloat(ss[1].replace(',', '.')),
 							Float.parseFloat(ss[2].replace(',', '.')), Float.parseFloat(ss[5].replace(',', '.')),
@@ -319,14 +320,14 @@ public class OHLdata {
 	 *                  para o código
 	 */
 	public static void loadNix2cable(Map<String, String> nix2cable, boolean fullName) {
-		URL url = ClassLoader.getSystemResource("cable//imp.txt");
+		URL url = ClassLoader.getSystemResource("cable" + File.separator + "imp.txt");
 		try {
 			InputStream stream = url.openStream();
 			InputStreamReader streamReader = new InputStreamReader(stream);
 			BufferedReader reader = new BufferedReader(streamReader);
 			String str;
 			while ((str = reader.readLine()) != null) {
-				if (!str.startsWith(COMM)) { // comentários
+				if (!str.startsWith(COMMENTS)) { // comentários
 					String[] ss = str.split("\t");
 					nix2cable.put(ss[0], ss[fullName ? 7 : 8]);
 				}
@@ -355,14 +356,14 @@ public class OHLdata {
 	 *                </ol>
 	 */
 	public static void loadNix2amp(Map<String, float[]> nix2amp) {
-		URL url = ClassLoader.getSystemResource("cable//imp.txt");
+		URL url = ClassLoader.getSystemResource("cable" + File.separator + "imp.txt");
 		try {
 			InputStream stream = url.openStream();
 			InputStreamReader streamReader = new InputStreamReader(stream);
 			BufferedReader reader = new BufferedReader(streamReader);
 			String str;
 			while ((str = reader.readLine()) != null) {
-				if (!str.startsWith(COMM)) {
+				if (!str.startsWith(COMMENTS)) {
 					String[] ss = str.split("\t");
 					nix2amp.put(ss[0], new float[] { Float.parseFloat(ss[10].replace(',', '.')),
 							Float.parseFloat(ss[11].replace(',', '.')) });
