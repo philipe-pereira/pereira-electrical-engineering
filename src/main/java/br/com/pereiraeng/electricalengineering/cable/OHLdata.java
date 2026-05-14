@@ -34,7 +34,7 @@ public class OHLdata {
 			BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
 			String str = null;
 			while ((str = reader.readLine()) != null)
-				out.add(str.split("\t")[1]);
+				out.add(str.split("\t")[1].toLowerCase());
 			reader.close();
 			stream.close();
 		} catch (IOException e) {
